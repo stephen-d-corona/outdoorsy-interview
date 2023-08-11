@@ -36,7 +36,7 @@ export const useRentals = ({ keywords, limit, offset }:
             .finally(() => {
                 setLoading(false)
             })
-    }, [])
+    }, [keywords, limit, offset])
 
     return {
         data, loading, error
