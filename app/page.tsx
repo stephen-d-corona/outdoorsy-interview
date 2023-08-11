@@ -20,7 +20,7 @@ export default function Home() {
             setKeyword(v)
           }} />
         </div>
-        <RentalList rentals={data} loading={loading} />
+        <RentalList rentals={data} loading={loading} error={error} />
       </div>
     </main>
   )

@@ -21,15 +21,12 @@ export const useRentals = ({ keywords, limit, offset }:
             }
         })
             .then((response) => {
-                console.log("my response!", response)
-
                 // map response to a Rental
                 const rentals = response.data.data.map((d) => ({
                     id: d.id,
                     name: d.attributes.name,
                     imageUrl: d.attributes.primary_image_url
                 }))
-                console.log("my datas!", rentals)
                 setData(rentals)
             })
             .catch(setError)
