@@ -13,11 +13,15 @@ export default function Home() {
     offset: 0
   })
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8">
-      <SearchBar onChange={(v) => {
-        setKeyword(v)
-      }} />
-      <RentalList rentals={data} />
+    <main className="flex min-h-screen flex-col items-center justify-between p-8 w-100">
+      <div className="max-w-lg w-full">
+        <div className="py-5">
+          <SearchBar onChange={(v) => {
+            setKeyword(v)
+          }} />
+        </div>
+        <RentalList rentals={data} />
+      </div>
     </main>
   )
 }
